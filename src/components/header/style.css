@@ -1,0 +1,14 @@
+header {
+  display: flex;
+  padding: 1.5rem 4rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(45, 101, 186);
+  color: #fff;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
