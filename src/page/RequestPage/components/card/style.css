@@ -1,0 +1,50 @@
+.request-card {
+  position: relative;
+  padding: 1rem;
+  border: 1px #ccc solid;
+}
+
+.request-card .status {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 0.2rem;
+  border-radius: 15px;
+  border: 1.5px orange solid;
+  color: orange;
+  font-size: 0.8rem;
+}
+.request-card .title,
+.request-card .client,
+.request-card .date {
+  display: block;
+  margin-bottom: 1rem;
+}
+.request-card .date {
+  color: #ccc;
+  font-weight: normal;
+  padding-bottom: 1rem;
+  border-bottom: 1px #ccc solid;
+}
+
+.request-card .desc span:last-of-type {
+  display: inline-block;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+.request-card button {
+  display: inline-block;
+  margin: 1rem 0;
+  margin-right: 1rem;
+  border: 1px rgb(45, 101, 186) solid;
+  background-color: rgb(45, 101, 186);
+  border-radius: 6px;
+  padding: 0.3rem;
+  color: #fff;
+}
+
+.request-card button:last-of-type {
+  background-color: #fff;
+  color: rgb(45, 101, 186);
+}

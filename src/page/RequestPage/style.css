@@ -1,0 +1,13 @@
+h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2em;
+}
+
+.filter-section {
+  display: flex;
+  margin: 1.5rem 0;
+}
+
+.filter-section select:first-of-type {
+  margin-right: 1rem;
+}
