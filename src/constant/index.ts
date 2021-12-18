@@ -15,7 +15,7 @@ export const MATERIALS = {
   VITAMIN: "vitamin",
 } as const;
 
-export type MateralType = Types<typeof MATERIALS>;
+export type MaterialsType = Types<typeof MATERIALS>;
 
 export const STATUS = {
   PENDING: "pending",

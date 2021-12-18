@@ -11,3 +11,23 @@ h1 {
 .filter-section select:first-of-type {
   margin-right: 1rem;
 }
+
+.request-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .filter-section {
+    display: block;
+  }
+
+  .switch-container {
+    margin-top: 1rem;
+  }
+
+  .request-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

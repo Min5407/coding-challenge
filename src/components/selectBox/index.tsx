@@ -1,22 +1,46 @@
-import React, { memo } from "react";
+import React, { ChangeEvent, memo, useState } from "react";
 import "./style.css";
 
 interface Props {
   defaultText: string;
   optionList: string[];
+  selectedList: string[];
+  onSelectChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  name: string;
 }
 
-const SelectBox = ({ optionList, defaultText }: Props) => {
+const SelectBox = ({
+  optionList,
+  defaultText,
+  selectedList,
+  onSelectChange: handleSelectChange,
+  name,
+}: Props) => {
+  const [showCheckBox, setShowCheckBox] = useState(false);
   return (
-    <select>
-      <option value="">{defaultText}</option>
-
-      {optionList.map((data) => (
-        <option value={data} key={data}>
-          {data}
-        </option>
-      ))}
-    </select>
+    <span className="select-box">
+      <span onClick={() => setShowCheckBox((prev) => !prev)}>
+        {defaultText}
+      </span>
+      {showCheckBox && (
+        <div className="checkbox-container">
+          {optionList.map((value) => (
+            <label key={value}>
+              <input
+                type="checkbox"
+                value={value}
+                name={name}
+                onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                  handleSelectChange(e)
+                }
+                checked={selectedList.includes(value)}
+              />
+              {value}
+            </label>
+          ))}
+        </div>
+      )}
+    </span>
   );
 };
 

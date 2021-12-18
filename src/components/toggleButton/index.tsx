@@ -1,10 +1,17 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 import "./style.css";
 
-const ToggleButton = () => {
+interface Props {
+  onToggleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+}
+
+const ToggleButton = ({ onToggleChange: handleToggleChange }: Props) => {
   return (
     <div className="switch-container">
-      <div className="switch">
+      <div
+        className="switch"
+        onChange={(e: ChangeEvent<HTMLInputElement>) => handleToggleChange(e)}
+      >
         <input type="checkbox" id="switch" />
         <span className="slider round"></span>
       </div>

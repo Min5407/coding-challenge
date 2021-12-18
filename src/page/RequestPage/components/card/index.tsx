@@ -10,8 +10,8 @@ interface Props {
 const Card = ({ cardData }: Props) => {
   return (
     <div className="request-card">
-      {cardData.status !== STATUS.ACTIVE && (
-        <span className="status">{STATUS.ACTIVE}</span>
+      {cardData.status === STATUS.ACTIVE && (
+        <span className="status">{cardData.status}</span>
       )}
       <b className="client">{cardData.title}</b>
       <span className="client">{cardData.client}</span>

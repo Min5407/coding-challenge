@@ -1,4 +1,4 @@
-import type { MethodsType, MateralType, StatusType } from "src/constant";
+import type { MethodsType, MaterialsType, StatusType } from "src/constant";
 
 export interface RequestDataType {
   id: number;
@@ -8,7 +8,7 @@ export interface RequestDataType {
   count: number;
   price: number;
   method: MethodsType[];
-  material: MateralType[];
+  material: MaterialsType[];
   status: StatusType;
 }
 

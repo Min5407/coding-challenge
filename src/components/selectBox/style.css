@@ -1,4 +1,29 @@
-select {
-  min-width: 100px;
+.select-box {
+  position: relative;
+  min-width: 120px;
   padding: 2px;
+}
+
+.select-box > span {
+  border: 2px gray solid;
+  padding: 0.2rem 1rem;
+  min-width: 120px;
+
+  border-radius: 6px;
+}
+.select-box span:hover {
+  border-color: rgb(45, 101, 186);
+}
+
+.checkbox-container {
+  position: absolute;
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  bottom: -10px;
+  left: 0;
+  border: 1px gray solid;
+  background-color: #ccc;
+  transform: translateY(100%);
+  z-index: 10;
 }
